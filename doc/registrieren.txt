@@ -1,0 +1,41 @@
+https://mibs.observium.org/mib/BROTHER-MIB/#
+https://wiki.ubuntuusers.de/Scanner/Brother/Scankey-Tool/
+
+
+snmpset -c internal -v 1 udp:192.168.178.101:161 1.3.6.1.4.1.2435.2.3.9.2.11.1.1.0 s 'TYPE=BR;BUTTON=SCAN;USER="MANUEL";FUNC=IMAGE;HOST=192.168.178.26:162;APPNUM=1;DURATION=300;BRID=;'
+
+----
+# Packet 0 from /home/manuel/Projekte/tmp/brotherscankeyd/trace.pcapng
+- 19
+- 16.398
+- 192.168.178.26
+- 192.168.178.101
+- SNMP
+- 194
+- set-request 1.3.6.1.4.1.2435.2.3.9.2.11.1.1.0
+
+
+0000   00 1b a9 7f 51 8c 40 b0 76 0f 7e 17 08 00 45 00   ....Q.@.v.~...E.
+0010   00 b4 7f c5 40 00 40 11 d4 a2 c0 a8 b2 1a c0 a8   ....@.@.........
+0020   b2 65 a7 f9 00 a1 00 a0 e6 82 | 30 81 95 02 01 00   .e........0.....  //ab dem | beginnt die UDP Payload (in ASCII also mit der '0')
+0030   04 08 69 6e 74 65 72 6e 61 6c a3 81 85 02 04 38   ..internal.....8
+0040   15 91 45 02 01 00 02 01 00 30 77 30 75 06 0f 2b   ..E......0w0u..+
+0050   06 01 04 01 93 03 02 03 09 02 0b 01 01 00 04 62   ...............b
+0060   54 59 50 45 3d 42 52 3b 42 55 54 54 4f 4e 3d 53   TYPE=BR;BUTTON=S
+0070   43 41 4e 3b 55 53 45 52 3d 22 4d 41 4e 55 45 4c   CAN;USER="MANUEL
+0080   22 3b 46 55 4e 43 3d 49 4d 41 47 45 3b 48 4f 53   ";FUNC=IMAGE;HOS
+0090   54 3d 31 39 32 2e 31 36 38 2e 31 37 38 2e 32 36   T=192.168.178.26
+00a0   3a 38 30 38 32 3b 41 50 50 4e 55 4d 3d 31 3b 44   :8082;APPNUM=1;D
+00b0   55 52 41 54 49 4f 4e 3d 33 30 30 3b 42 52 49 44   URATION=300;BRID
+00c0   3d 3b                                             =;
+
+
+
+
+
+manuel@tower:~$ nc -u -l 54925
+u0TYPE=BR;BUTTON=SCAN;USER="MANUEL";FUNC=IMAGE;HOST=192.168.178.26:8082;APPNUM=1;P1=0;P2=0;P3=0;P4=0;REGID=54702;SEQ=4;u0TYPE=BR;BUTTON=SCAN;USER="MANUEL";FUNC=IMAGE;HOST=192.168.178.26:8082;APPNUM=1;P1=0;P2=0;P3=0;P4=0;REGID=54702;SEQ=4;^C
+manuel@tower:~$ 
+
+
+
