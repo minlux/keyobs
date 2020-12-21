@@ -8,7 +8,6 @@ add_executable(keyobs
    dep/cber/ber.c
    dep/cber/snmp.c
    dep/cJSON/cJSON.c
-   src/netutils.c
    src/main.cpp
 )
 

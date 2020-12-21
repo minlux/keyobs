@@ -27,7 +27,6 @@
 #include <thread>
 #include "cJSON.h"
 #include "snmp.h"
-#include "netutils.h"
 
 
 
@@ -236,7 +235,7 @@ static int main_task(cJSON * configJson)
 
       //wait before registration renewal
       std::this_thread::sleep_for(std::chrono::seconds(280)); //280 < 300, as registration expiers (as configured) after 300s
-   } while (false /*true*/);
+   } while (true);
 
 
    //wait for the observer thread
