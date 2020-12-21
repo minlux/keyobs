@@ -1,0 +1,6 @@
+[submodule "dep/cber"]
+	path = dep/cber
+	url = https://github.com/darsto/cber.git
+[submodule "dep/cJSON"]
+	path = dep/cJSON
+	url = https://github.com/DaveGamble/cJSON.git

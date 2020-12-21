@@ -1,0 +1,49 @@
+[
+  {
+    "ip":"192.168.178.101",
+    "FILE":[
+      {
+        "id":"PDF 135",
+        "cmd":"echo 'scan frontside to pdf'"
+      },
+      {
+        "id":"PDF 642",
+        "cmd":"echo 'scan backside and merge with frontside into one pdf'"
+      }
+    ],
+    "IMAGE":[
+      {
+        "id":"JPG 300",
+        "cmd":"echo 'scan to jpg, 300dpi'"
+      },
+      {
+        "id":"JPG 600",
+        "cmd":"echo 'scan to jpg, 600dpi'"
+      },
+      {
+        "id":"JPG 1200",
+        "cmd":"echo 'scan to jpg, 1200dpi'"
+      }
+    ],
+    "OCR":[
+      {
+        "id":"Receipt",
+        "cmd":"echo 'scan to document managment system. Tag: *Receipt*'"
+      },
+      {
+        "id":"Private",
+        "cmd":"echo 'scan to document managment system. Tag: *Private*'"
+      }
+    ],
+    "EMAIL":[
+      {
+        "id":"info@minlux",
+        "cmd":"echo 'scan to pdf and send to info@minlux.de'"
+      },
+      {
+        "id":"me@home",
+        "cmd":"echo 'scan to pdf and email it to me'"
+      }
+    ]
+  }
+]
