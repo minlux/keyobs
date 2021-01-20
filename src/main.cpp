@@ -317,6 +317,7 @@ static void observer_task(cJSON * configJson)
                         if (cmd != nullptr)
                         {
                            // puts(cmd);
+                           // std::this_thread::sleep_for(std::chrono::seconds(1)); //for whatever reason, scanadf and scanimage fails when i do not wait some time ...
                            system(cmd);
                         }
                      }

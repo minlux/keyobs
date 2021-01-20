@@ -27,18 +27,22 @@
     ],
     "OCR":[
       {
-        "id":"Receipt",
-        "cmd":"echo 'scan to document managment system. Tag: *Receipt*'"
+        "id":"1-seitig",
+        "cmd":"scan/pdf_1.sh"
       },
       {
-        "id":"Private",
-        "cmd":"echo 'scan to document managment system. Tag: *Private*'"
+        "id":"2-seitig 135",
+        "cmd":"scan/pdf_135.sh"
+      },
+      {
+        "id":"2-seitig 642",
+        "cmd":"scan/pdf_642.sh"
       }
     ],
     "EMAIL":[
       {
         "id":"info@minlux",
-        "cmd":"echo 'scan to pdf and send to info@minlux.de'"
+        "cmd":"echo \"scan to pdf \"and\" send to info@minlux.de\""
       },
       {
         "id":"me@home",

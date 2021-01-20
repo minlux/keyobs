@@ -1,8 +1,6 @@
 # keyobs
 Brother Scanner Key Observer.
 
-Adapt the
-
 
 ## Setup
 
