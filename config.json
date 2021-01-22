@@ -13,8 +13,8 @@
     ],
     "IMAGE":[
       {
-        "id":"JPG 300",
-        "cmd":"echo 'scan to jpg, 300dpi'"
+        "id":"Foto 11x17",
+        "cmd":"scan/photo_11x17.sh"
       },
       {
         "id":"JPG 600",
