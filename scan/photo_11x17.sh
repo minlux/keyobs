@@ -1,4 +1,10 @@
 #! /bin/bash
+#scan 11x17 photo
+
+#create a filename based on the current date/time
+DATE="$(/bin/date +%Y%m%d-%H%M%S)"
+OUTPUT="/tmp/${DATE}.jpg"
+
 #cleanup before we start
 rm /tmp/photo*.pnm 2> /dev/null
 
@@ -10,8 +16,8 @@ scanadf --device-name="brother4:net1;dev0" --mode="24bit Color" --resolution=300
 j=1000
 for i in /tmp/photo*.pnm
 do
-  # convert $i -fuzz 30% -trim -compress jpeg -quality 95 "/tmp/IMG${j}.jpg"
-  convert $i -compress jpeg -quality 95 "/tmp/IMG${j}.jpg"
+  # convert $i -fuzz 30% -trim -compress jpeg -quality 95 ${OUTPUT}
+  convert $i -compress jpeg -quality 95 ${OUTPUT}
   j=$((j + 1))
 done
 

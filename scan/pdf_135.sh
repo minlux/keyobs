@@ -1,4 +1,6 @@
 #! /bin/bash
+#step 1 to scan a batch of duplex pages into one pdf -> scan all odd pages.
+
 #cleanup before we start
 rm /tmp/scan*.pnm 2> /dev/null
 
